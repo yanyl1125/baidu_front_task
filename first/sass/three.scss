@@ -1,3 +1,12 @@
+/**
+  * https://developer.mozilla.org/zh-CN/docs/Web/CSS/position
+  * https://developer.mozilla.org/en-US/docs/Web/CSS/float
+  * http://www.barelyfitz.com/screencast/html-training/css/positioning/
+  * http://zh.learnlayout.com/clearfix.html
+  * http://stackoverflow.com/questions/211383/which-method-of-clearfix-is-best
+  * baidu task three:
+  * http://ife.baidu.com/task/detail?taskId=3
+  */
 @charset "utf-8";
 
 @import "compass";
@@ -44,7 +53,6 @@ body {
     }
     .team-logo{
         float: left;
-        @include box-sizing(border-box);
     	@include clearfix();
         width: 200px;
         .logo-content{
