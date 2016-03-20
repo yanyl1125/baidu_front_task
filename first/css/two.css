@@ -1,0 +1,373 @@
+/**
+  * the website of article on the below:
+  * http://compass-style.org/examples/compass/css3/flexbox/
+  * http://www.ruanyifeng.com/blog/2012/11/compass.html
+  * http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool
+  * task detail info:
+  * http://ife.baidu.com/task/detail?taskId=2
+  */
+/*
+   * box-shadow:
+   * @include single-box-shadow;
+   * @include box-shadow(gray 3px 3px 1px);
+   * @include box-shadow(rgba(blue, 0.4) 0 0 25px, rgba(green, 0.2) 0 0 3px 1px inset);
+   */
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 29, ../sass/two.scss */
+body {
+  font-size: 16px;
+  font-family: monospace;
+}
+
+/* line 33, ../sass/two.scss */
+#main {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+/* line 36, ../sass/two.scss */
+#main header,
+#main footer {
+  -webkit-flex: 1 0 100%;
+  flex: 1 0 100%;
+}
+/* line 40, ../sass/two.scss */
+#main header {
+  background: #383838;
+  display: -webkit-flex;
+  display: flex;
+  height: 5em;
+  color: white;
+  font-size: 12px;
+}
+/* line 46, ../sass/two.scss */
+#main header .logo {
+  -webkit-flex: 1 1 30%;
+  flex: 1 1 30%;
+  height: 5em;
+  margin-left: 2em;
+}
+/* line 50, ../sass/two.scss */
+#main header .logo img {
+  height: 100%;
+}
+/* line 54, ../sass/two.scss */
+#main header ul {
+  -webkit-flex: 1 1 70%;
+  flex: 1 1 70%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  list-style: inherit;
+  list-style-type: disc;
+  margin-right: 2.5em;
+}
+/* line 61, ../sass/two.scss */
+#main header ul li {
+  margin-left: 2em;
+  height: 5em;
+  line-height: 5em;
+}
+/* line 65, ../sass/two.scss */
+#main header ul li:nth-child(4) {
+  color: gray;
+}
+/* line 71, ../sass/two.scss */
+#main content {
+  background: #cccccc;
+  padding: 0 1em 1em;
+}
+/* line 74, ../sass/two.scss */
+#main content article,
+#main content form {
+  background: white;
+  padding: 1em 1.5em 2em 1.5em;
+  margin: 2em 0;
+  border-right: 3px gray solid;
+  border-bottom: 3px gray solid;
+}
+/* line 81, ../sass/two.scss */
+#main content article h2,
+#main content article h3,
+#main content article h4,
+#main content form h2,
+#main content form h3,
+#main content form h4 {
+  font-weight: bold;
+  margin: 1em 0;
+}
+/* line 87, ../sass/two.scss */
+#main content article h2,
+#main content form h2 {
+  font-size: 22px;
+}
+/* line 90, ../sass/two.scss */
+#main content article h3,
+#main content form h3 {
+  font-size: 16px;
+  color: gray;
+}
+/* line 94, ../sass/two.scss */
+#main content article h4,
+#main content form h4 {
+  font-size: 12px;
+  color: gray;
+}
+/* line 98, ../sass/two.scss */
+#main content article span,
+#main content form span {
+  font-weight: normal;
+}
+/* line 101, ../sass/two.scss */
+#main content article img,
+#main content form img {
+  height: 10em;
+  margin: 1em 0;
+}
+/* line 105, ../sass/two.scss */
+#main content article p,
+#main content form p {
+  line-height: 1.8em;
+  text-indent: 2em;
+}
+/* line 109, ../sass/two.scss */
+#main content article dl,
+#main content form dl {
+  margin: 0 0 1.5em 2.5em;
+  border: 1px solid #d2d8cd;
+  width: 10em;
+}
+/* line 113, ../sass/two.scss */
+#main content article dl dt,
+#main content form dl dt {
+  text-align: center;
+  margin: 0.5em 0;
+  font-size: 12px;
+}
+/* line 119, ../sass/two.scss */
+#main content article dl dd img,
+#main content form dl dd img {
+  margin: 0.5em 10%;
+  height: auto;
+  width: 80%;
+}
+/* line 126, ../sass/two.scss */
+#main content article ol,
+#main content form ol {
+  margin: 1em 2em;
+  list-style: decimal;
+  list-style-position: inside;
+}
+/* line 130, ../sass/two.scss */
+#main content article ol li,
+#main content form ol li {
+  margin-top: 0.5em;
+}
+/* line 134, ../sass/two.scss */
+#main content article table,
+#main content form table {
+  border: 1px solid #d2d8cd;
+  width: 100%;
+  height: 2em;
+  line-height: 2em;
+  font-size: 12px;
+}
+/* line 141, ../sass/two.scss */
+#main content article table thead th,
+#main content form table thead th {
+  border: 1px solid #d2d8cd;
+  font-weight: bolder;
+  color: white;
+  background: #333333;
+  padding: 0 0.5em;
+}
+/* line 151, ../sass/two.scss */
+#main content article table tbody tr td,
+#main content form table tbody tr td {
+  border: 1px solid #d2d8cd;
+  padding: 0 0.5em;
+}
+/* line 156, ../sass/two.scss */
+#main content article table tbody tr:last-child td,
+#main content form table tbody tr:last-child td {
+  font-weight: bolder;
+  background: #cccccc;
+}
+/* line 164, ../sass/two.scss */
+#main content article aside,
+#main content form aside {
+  font-size: 20px;
+  border-left: 0.2em #cccccc solid;
+  height: 1.8em;
+  line-height: 1.8em;
+  padding-left: 0.4em;
+}
+/* line 171, ../sass/two.scss */
+#main content article .form-item,
+#main content form .form-item {
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 1em;
+}
+/* line 174, ../sass/two.scss */
+#main content article .form-item label,
+#main content form .form-item label {
+  -webkit-flex: 1 1 30%;
+  flex: 1 1 30%;
+  text-align: right;
+  font-size: 16px;
+  padding-top: 0.2em;
+  margin-right: 1em;
+}
+/* line 181, ../sass/two.scss */
+#main content article .form-item .form-input,
+#main content form .form-item .form-input {
+  -webkit-flex: 1 1 70%;
+  flex: 1 1 70%;
+}
+/* line 183, ../sass/two.scss */
+#main content article .form-item .form-input input, #main content article .form-item .form-input label,
+#main content form .form-item .form-input input,
+#main content form .form-item .form-input label {
+  vertical-align: middle;
+}
+/* line 186, ../sass/two.scss */
+#main content article .form-item .form-input input[type='text'],
+#main content form .form-item .form-input input[type='text'] {
+  padding: 0.3em 0;
+}
+/* line 189, ../sass/two.scss */
+#main content article .form-item .form-input label,
+#main content form .form-item .form-input label {
+  margin-left: -0.5em;
+}
+/* line 192, ../sass/two.scss */
+#main content article .form-item .form-input input[type='radio'], #main content article .form-item .form-input input[type="checkbox"],
+#main content form .form-item .form-input input[type='radio'],
+#main content form .form-item .form-input input[type="checkbox"] {
+  padding-bottom: 0.3em;
+}
+/* line 195, ../sass/two.scss */
+#main content article .form-item .form-input textarea,
+#main content form .form-item .form-input textarea {
+  font-size: 16px;
+}
+/* line 61, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+#main content article .form-item .form-input textarea:-moz-placeholder,
+#main content form .form-item .form-input textarea:-moz-placeholder {
+  color: black;
+  font-size: 16px;
+}
+/* line 64, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+#main content article .form-item .form-input textarea::-moz-placeholder,
+#main content form .form-item .form-input textarea::-moz-placeholder {
+  color: black;
+  font-size: 16px;
+}
+/* line 67, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+#main content article .form-item .form-input textarea:-ms-input-placeholder,
+#main content form .form-item .form-input textarea:-ms-input-placeholder {
+  color: black;
+  font-size: 16px;
+}
+/* line 56, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+#main content article .form-item .form-input textarea::-webkit-input-placeholder,
+#main content form .form-item .form-input textarea::-webkit-input-placeholder {
+  color: black;
+  font-size: 16px;
+}
+/* line 203, ../sass/two.scss */
+#main content article .form-item p,
+#main content form .form-item p {
+  text-indent: 0;
+  font-size: 12px;
+  color: #b3b3b3;
+}
+/* line 209, ../sass/two.scss */
+#main content article input[type='submit'],
+#main content form input[type='submit'] {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #6666ff;
+  color: white;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 2em;
+}
+/* line 221, ../sass/two.scss */
+#main footer {
+  text-align: center;
+  color: #e6e6e6;
+  font-size: 12px;
+  background: #333333;
+  padding: 3em 0 2em 0;
+}
