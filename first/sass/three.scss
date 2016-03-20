@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+
+$font24: 24px;
+$font22: 22px;
+$font20: 20px;
+$font18: 18px;
+$font16: 16px;
+$font14: 14px;
+$font12: 12px;
+$gray: gray;
+$gray-border: #bac0b6;
+body {
+    font-size: $font16;
+    font-family: monospace;
+}
+
+@mixin border-bg() {
+    border: 1px solid $gray-border;
+    background: white;
+}
+
+#main{
+    min-height: 20em;
+    max-height: 50em;
+    position: relative;
+    width: 90%;
+    margin: 2em 5%;
+    background: lighten(black, 90%);
+    border: 1px solid transparent;
+
+    div[class^=team]{
+        height: 100%;
+        height: 20em;
+        padding-top: 1em;
+
+    }
+
+    img{
+        width: 5em;
+    }
+    .team-logo{
+        float: left;
+        @include box-sizing(border-box);
+    	@include clearfix();
+        width: 200px;
+        .logo-content{
+            @include display-flex;
+            @include flex-wrap(wrap);
+            @include border-bg;
+            font-size: $font14;
+            margin: 0 0.5em 0 1em;
+
+            img{
+                margin: 1em;
+            }
+
+            span{
+                margin-top: 1em;
+            }
+
+        }
+    }
+    .team-info{
+        margin-left: 200px;
+        margin-right: 120px;
+
+        .info-content{
+            @include border-bg;
+            margin: 0 0.5em 0 0.5em;
+            padding: 1em;
+
+            h1{
+                margin: 1em 0;
+                text-align: center;
+            }
+
+            p{
+                text-indent: 1em;
+                font-size: $font14;
+                line-height: 1.5em;
+            }
+        }
+    }
+    .team-members{
+        @include clearfix();
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 120px;
+
+        ul{
+            @include border-bg;
+            margin: 0 1em 0 0.5em;
+            li{
+                @include display-flex;
+                @include justify-content(center);
+                margin: 1em 0;
+            }
+        }
+    }
+}

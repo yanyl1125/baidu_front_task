@@ -6,12 +6,12 @@
   * task detail info:
   * http://ife.baidu.com/task/detail?taskId=2
   */
-/*
-   * box-shadow:
-   * @include single-box-shadow;
-   * @include box-shadow(gray 3px 3px 1px);
-   * @include box-shadow(rgba(blue, 0.4) 0 0 25px, rgba(green, 0.2) 0 0 3px 1px inset);
-   */
+/**
+  * box-shadow:
+  * @include single-box-shadow;
+  * @include box-shadow(gray 3px 3px 1px);
+  * @include box-shadow(rgba(blue, 0.4) 0 0 25px, rgba(green, 0.2) 0 0 3px 1px inset);
+  */
 @import "compass/reset";
 @import "compass/css3";
 @import "compass/utilities";
@@ -30,6 +30,7 @@ body {
     font-size: $font16;
     font-family: monospace;
 }
+
 #main {
     @include display-flex;
     @include flex-wrap(wrap);
