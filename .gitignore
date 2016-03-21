@@ -2,6 +2,7 @@
 logs
 *.log
 .sass-cache/
+*.cache
 npm-debug.log*
 
 # Runtime data
