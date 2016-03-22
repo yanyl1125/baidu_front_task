@@ -1,0 +1,113 @@
+/**
+  * https://developer.mozilla.org/zh-CN/docs/Web/CSS/position
+  * https://developer.mozilla.org/en-US/docs/Web/CSS/float
+  * http://www.barelyfitz.com/screencast/html-training/css/positioning/
+  * http://zh.learnlayout.com/clearfix.html
+  * http://stackoverflow.com/questions/211383/which-method-of-clearfix-is-best
+  * baidu task three:
+  * http://ife.baidu.com/task/detail?taskId=3
+  */
+@charset "utf-8";
+
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+
+$font24: 24px;
+$font22: 22px;
+$font20: 20px;
+$font18: 18px;
+$font16: 16px;
+$font14: 14px;
+$font12: 12px;
+$gray: gray;
+$gray-border: #bac0b6;
+body {
+    font-size: $font16;
+    font-family: monospace;
+}
+
+@mixin border-bg() {
+    border: 1px solid $gray-border;
+    background: white;
+}
+
+#main{
+    min-height: 20em;
+    max-height: 30em;
+    position: relative;
+    width: 90%;
+    margin: 2em 5%;
+    background: lighten(black, 90%);
+    border: 1px solid transparent;
+
+    @include display-flex;
+    @include flex-direction(row); // column:上下
+    @include flex-wrap(nowrap); // 放不下是否换行
+
+
+    div[class^=team]{
+        height: 100%;
+        height: 20em;
+        padding: 1em 0;
+    }
+
+    img{
+        width: 5em;
+    }
+    .team-logo{
+        @include flex(0 0 200px);
+
+        .logo-content{
+            @include display-flex;
+            @include flex-wrap(wrap);
+            @include border-bg;
+            font-size: $font14;
+            margin: 0 0.5em 0 1em;
+
+            img{
+                margin: 1em;
+            }
+
+            span{
+                margin-top: 1em;
+            }
+
+        }
+    }
+    .team-info{
+        @include flex(1 1 auto);
+        @include display-flex;
+        @include justify-content(center);
+
+        .info-content{
+            @include border-bg;
+            margin: 0 0.5em 0 0.5em;
+            padding: 1em;
+
+            h1{
+                margin: 1em 0;
+                text-align: center;
+            }
+
+            p{
+                text-indent: 1em;
+                font-size: $font14;
+                line-height: 1.5em;
+            }
+        }
+    }
+    .team-members{
+        @include flex(0 0 120px);
+
+        ul{
+            @include border-bg;
+            margin: 0 1em 0 0.5em;
+            li{
+                @include display-flex;
+                @include justify-content(center);
+                margin: 1em 0;
+            }
+        }
+    }
+}
