@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明编码字符集：中文编码：（gbk/gbk2312），国际编码：（utf-8）-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Html 基础标签--yanyali</title>
+		<!--声明当前页面的三要素-->
+		<meta name="keywords" content="关键词,关键词,关键词">
+		<meta name="description" content="">
+
+		<!--js/css-->
+
+		<style type="text/css">
+			p span{font-size:25px;color:red}
+		</style>
+	</head>
+<body>
+	<h1>Html 基础标签(特殊符号)</h1>
+
+	<a href="#ts">特殊符号</a> | <a href="#p">p标签 </a> | <a href="#font">font标签</a> | <a href="#strong/b">strong/b标签</a> |
+	<a href="#span">span标签</a> |  <a href="#a">a标签</a> | <a href="#marquee">marquee标签</a>
+
+	<h2>Html - 特殊符号<h2><a name="ts"></a>
+
+	空格：------潭州&nbsp;&nbsp;教育-------<br/><br/>
+
+	大于号：------点击这里加载百度&nbsp;&nbsp;<a href="http://baidu.com">更多&gt;&gt;</a>------<br/><br/>
+
+	小于号：------点击这里加载京东&nbsp;&nbsp;<a href="http://jingdong.com">更多&lt;&lt;</a>------<br/><br/>
+
+	引号：-------博创华宇&quot;+互联网&quot;&nbsp;&nbsp;<a href="http://tanzhouedu.com">百佳教育网站&lt;&lt;博创华宇&gt;&gt</a>-------<br/><br/>
+
+	版权号：------Copyright &copy; 2011-2017 yanyali.com 版权所有。--------<br/></br>
+	
+	<h2>Html - p标签  （p标签）</h2><a name="p"></a>
+	<p>
+		<span>百科</span>（<strong>英语</strong>：Encyclopedia；<strong>法语</strong>：Encyclopédie；<b>德语</b>：Enzyklopädie<b>俄语</b>： энциклопедия ；<strong>葡萄牙语</strong>：enciclopédia ）指天文、地理、自然、人文、宗教、信仰、文学等全部学科的知识的总称。
+	</p>
+	
+	<h2>Html - strong/b标签  （p标签）</h2><a name="strong/b"></a>
+	<p>
+		<span>百科</span>（<strong>英语</strong>：Encyclopedia；<strong>法语</strong>：Encyclopédie；<b>德语</b>：Enzyklopädie<b>俄语</b>： энциклопедия ；<strong>葡萄牙语</strong>：enciclopédia ）指天文、地理、自然、人文、宗教、信仰、文学等全部学科的知识的总称。
+	</p>
+	<h2>Html - font标签  （font标签）</h2><a name="font"></a>
+
+	<font size="5" color="blue" face="微软雅黑">我是中国人</font>
+
+	<h2>Html - span标签  （行级元素标签）</h2><a name="span"></a>
+
+	<p>
+		<span>百科</span>（<strong>英语</strong>：Encyclopedia；<strong>法语</strong>：Encyclopédie；<b>德语</b>：Enzyklopädie<b>俄语</b>： энциклопедия ；<strong>葡萄牙语</strong>：enciclopédia ）指天文、地理、自然、人文、宗教、信仰、文学等全部学科的知识的总称。
+	</p>
+
+	<h2>Html - a标签（a连接）</h2><a name="a"></a>
+	<a href="http://baidu.com"  target="_blank">点击进入百度</a><br></br>
+
+	<a href="http://tool.chinaz.com/Tools/HtmlChar.aspx" target="_blank">特殊符号大全</a><br/><br/>
+	
+	<h2>Html - marquee标签（滚动标签）</h2><a name="marquee"></a>
+	<marquee direction="right" onmouseover="this.stop();" onmouseout="this.start();" width="300px" height="100px" style="border:1px solid red">
+	
+		我是一个美女。。。哈哈
+	
+	</marquee>
+
+</html>
